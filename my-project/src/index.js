@@ -12,7 +12,11 @@ import * as serviceWorker from './serviceWorker';
 const helloWorld = 'Hello world!';
 const props ={
   className: 'main-title',
-  children: [ helloWorld, 'Goodbye world']
+  children: [ helloWorld, 'Goodbye world'],
+  style:{
+    fontSize: '72px',
+    marginLeft: '10px'
+  }
 };
 const MyComponent = () => <h1 className='my-title' {...props}></h1>
 
