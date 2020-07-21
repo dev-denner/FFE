@@ -9,11 +9,14 @@ import * as serviceWorker from './serviceWorker';
 // elementw.innerHTML = 'Hello world!';
 // elementw.className = 'container';
 
-// rootElement.appendChild(element);
+const helloWorld = 'Hello world!';
+const props ={
+  className: 'main-title',
+  children: [ helloWorld, 'Goodbye world']
+};
+const MyComponent = () => <h1 className='my-title' {...props}></h1>
 
-const element = React.createElement('div', {className: 'container', children: ['Hello world!', 'Goodbye world!!!']});
-console.log(element);
-ReactDOM.render(element, rootElement);
+ReactDOM.render(<MyComponent />, rootElement);
 
 // ReactDOM.render(
 //   <React.StrictMode>
