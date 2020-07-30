@@ -19,11 +19,13 @@ export function TodoList() {
         }
     ];
 
+    const handleShowTaskName = (taskName) => alert(`Você clicou em ${taskName}`);
+
     return ( 
         <ul>
             {taskItems.map(task => 
             <li>
-                <TodoListItem {...task} />
+                <TodoListItem onShowTaskName={handleShowTaskName} {...task} />
             </li>
             )}
         </ul>
